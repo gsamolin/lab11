@@ -1,0 +1,23 @@
+<div align="center">
+<h1>Посчитали</h1>
+<p>Числа Армстронга:</p>
+<table border=1>
+  <tr>
+    <td>  Индекс </td>
+    <td>  Число  </td>
+  </tr>
+  <% @right_numbers.each do |number| %>
+    <tr>
+      <td> <%= number[0] %> </td>
+      <td> <%= number[1] %> </td>
+    </tr>
+  <% end %>
+</table>
+<p>Количество чисел Армстронга: <%= @right_numbers.length %></p>
+<p><%= @msg %></p>
+<%= link_to "Показать БД в JSON", calc_json_path %>
+</br>
+<%= link_to "Показать БД в XML", calc_xml_path %>
+<%= button_to 'Вернуться', root_path, method: :get, class: 'btn btn-primary' %>
+</div>
+
